@@ -12,7 +12,7 @@ public class App extends JFrame{
     JPanel panel;
     JButton ok, cancel;
     JMenuBar menubar, statusbar;
-    JDesktopPane desktop, desktop1;
+    JDesktopPane desktop;
 
     public App(){
         // Default to display the window
@@ -100,6 +100,7 @@ public class App extends JFrame{
 
         // Adds the Action for the Menu Items
         exitMenuItem.addActionListener(new FileActionListener());
+        aboutMenuItem.addActionListener(new HelpActionListener());
 
         // Adds it to the menubar
         menubar.add(fileMenu);
@@ -145,8 +146,13 @@ public class App extends JFrame{
     private class HelpActionListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            AboutDlg dlg = new AboutDlg();
-            dlg.setVisible(true);
+            if(e.getActionCommand().equals("About")){
+                AboutDlg dlg = new AboutDlg();
+                dlg.setVisible(true);
+            }
+            if(e.getActionCommand().equals("Help")){
+
+            }
         }
     }
 

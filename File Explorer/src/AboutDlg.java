@@ -5,6 +5,7 @@ public class AboutDlg extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
+    private JTextPane helloWelcomeToOurTextPane;
 
     public AboutDlg() {
         this.setSize(800,600);
