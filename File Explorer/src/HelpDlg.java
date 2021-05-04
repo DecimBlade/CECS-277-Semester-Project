@@ -1,15 +1,15 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class AboutDlg extends JDialog {
+public class HelpDlg extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextPane helloWelcomeToOurTextPane;
+    private JTextPane authorsEllesiaTruongAndTextPane;
 
-    public AboutDlg() {
-        this.setSize(800,600);
-        this.setTitle("About");
+    public HelpDlg() {
+        this.setSize(800, 600);
+        this.setTitle("Help");
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -42,7 +42,6 @@ public class AboutDlg extends JDialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
-
     private void onOK() {
         // add your code here
         dispose();
@@ -54,7 +53,7 @@ public class AboutDlg extends JDialog {
     }
 
     public static void main(String[] args) {
-        AboutDlg dialog = new AboutDlg();
+        HelpDlg dialog = new HelpDlg();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);

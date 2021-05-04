@@ -1,15 +1,14 @@
 import javax.swing.*;
 import java.awt.event.*;
 
-public class AboutDlg extends JDialog {
+public class RenameDlg extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextPane helloWelcomeToOurTextPane;
 
-    public AboutDlg() {
-        this.setSize(800,600);
-        this.setTitle("About");
+    public RenameDlg() {
+        this.setSize(800, 600);
+        this.setTitle("Rename");
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
@@ -42,7 +41,6 @@ public class AboutDlg extends JDialog {
         }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
-
     private void onOK() {
         // add your code here
         dispose();
@@ -54,7 +52,7 @@ public class AboutDlg extends JDialog {
     }
 
     public static void main(String[] args) {
-        AboutDlg dialog = new AboutDlg();
+        RenameDlg dialog = new RenameDlg();
         dialog.pack();
         dialog.setVisible(true);
         System.exit(0);
