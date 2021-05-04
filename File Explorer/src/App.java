@@ -101,6 +101,7 @@ public class App extends JFrame{
         // Adds the Action for the Menu Items
         exitMenuItem.addActionListener(new FileActionListener());
         aboutMenuItem.addActionListener(new HelpActionListener());
+        helpMenuItem.addActionListener(new HelpActionListener());
 
         // Adds it to the menubar
         menubar.add(fileMenu);
@@ -143,15 +144,20 @@ public class App extends JFrame{
         }
     }
 
+    /**
+     * Help drop down menu actions
+     * Will create new dialog windows for each window the user chooses
+     */
     private class HelpActionListener implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equals("About")){
-                AboutDlg dlg = new AboutDlg();
-                dlg.setVisible(true);
+                AboutDlg Aboutdlg = new AboutDlg();
+                Aboutdlg.setVisible(true);
             }
             if(e.getActionCommand().equals("Help")){
-
+                HelpDlg Helpdlg = new HelpDlg();
+                Helpdlg.setVisible(true);
             }
         }
     }
@@ -162,8 +168,8 @@ public class App extends JFrame{
             if(e.getActionCommand().equals("Run")){
                 System.out.println("Running the program");
             }
-            if(e.getActionCommand().equals("Debug")){
-                System.out.println("Debugging the Program");
+            if(e.getActionCommand().equals("")){
+                System.out.println("");
             }
         }
     }
