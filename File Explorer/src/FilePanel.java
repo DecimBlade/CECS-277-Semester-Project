@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 
-package cecs277desktoppane;
-
 
 import java.awt.Dimension;
 import java.awt.datatransfer.DataFlavor;

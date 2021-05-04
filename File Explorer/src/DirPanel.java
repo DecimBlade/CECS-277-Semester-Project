@@ -8,7 +8,7 @@ public class DirPanel extends JPanel {
     private JScrollPane scrollPane = new JScrollPane();
     private JTree dirTree = new JTree();
 
-    public DirPanel(){
+    public DirPanel(String dir){
         scrollPane.setViewportView(dirTree);
         dirTree.setShowsRootHandles(true);
         dirTree.setEditable(true);
