@@ -15,10 +15,10 @@ public class DirPanel extends JPanel {
 
     public void treeBuilder(String dir){
         File file = new File(dir);
-        dirTree.addTreeSelectionListener(new MyTreeListener());
+        //dirTree.addTreeSelectionListener(new MyTreeListener());
         DefaultMutableTreeNode root = new DefaultMutableTreeNode(dir);
         DefaultTreeModel treeModel = new DefaultTreeModel(root);
-        fileCreator(root, file);
+        //fileCreator(root, file);
         dirTree.setModel(treeModel);
     }
 }
