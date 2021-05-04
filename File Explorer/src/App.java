@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * This has all of the buttons and panels that the File Explorer has.
+ * This has all the contents of the File Explorer
  */
 public class App extends JFrame{
     JPanel panel;
@@ -102,6 +102,8 @@ public class App extends JFrame{
         exitMenuItem.addActionListener(new FileActionListener());
         aboutMenuItem.addActionListener(new HelpActionListener());
         helpMenuItem.addActionListener(new HelpActionListener());
+        newMenuItem.addActionListener(new WindowActionListener());
+        cascadeMenuItem.addActionListener(new WindowActionListener());
 
         // Adds it to the menubar
         menubar.add(fileMenu);
@@ -140,6 +142,20 @@ public class App extends JFrame{
         public void actionPerformed(ActionEvent e) {
             if(e.getActionCommand().equals("Exit")){
                 System.exit(0);
+            }
+        }
+    }
+
+    private class WindowActionListener implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(e.getActionCommand().equals("New")){
+                FileFrame newFrame = new FileFrame();
+                desktop.add(newFrame);
+                newFrame.setVisible(true);
+            }
+            if(e.getActionCommand().equals("Cascade")){
+
             }
         }
     }
